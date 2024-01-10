@@ -1,0 +1,59 @@
+.\" Manpage for internsctl.
+.\" Contact vs1292959@gmail.com to correct errors or typos.
+.TH internsctl 1 "20 October 2020" "1.0" "internsctl man page"
+.SH NAME
+internsctl \- does multiple operations 
+
+.SH SYNOPSIS
+.B internsctl
+.RB [OPTION]...
+.RB [FILE]...
+
+.SH DESCRIPTION
+internsctl is high level shell program for doing multiple tasks . It can be used to get information about the system , create new users and get the details about different files present in the system.
+
+.SH OPTIONS
+.TP
+.B cpu getinfo
+displays information about CPU architecture
+.TP
+.B file getinfo <file-name>
+displays information about the file
+.TP
+.B file getinfo [OPTION] <file-name>
+displays specific information about the file
+.TP
+.B --last-modified , -m
+displays the last modified time of the specified file only
+.TP
+.B memory getinfo
+display amount of free and used memory in the system
+.TP
+.B --owner , -o
+display the owner of the specified file only
+.TP
+.B --permissions , -p
+display the permissions of the specified file only
+.TP
+.B --size , -s
+display the size of the specified file only
+.TP
+.B user create <user-name>
+creates a new user with the entered username
+.TP
+.B user list
+lists all the users in the server
+.TP
+.B user list --sudo-only
+list all the users with sudo permissions
+.TP
+.B --version
+output version 
+
+
+.SH SEE ALSO
+useradd(8), lscpu
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Aditya Singh (adityasingh87791@gmail.com)
